@@ -1,22 +1,31 @@
-def knapSack(peso_max, itens, n):
+def knapSack(peso_max, itens, n, it=[]):
 	if n == 0:
-		return 0
+		return [0, it]
 
 	if (itens[n-1]['peso'] > peso_max):
-		return knapSack(peso_max, itens, n-1)
+		return knapSack(peso_max, itens, n-1, it)
  
 	else:
-		return max(
-            itens[n-1]['valor'] + 
-			knapSack(peso_max-itens[n-1]['peso'], itens, n-1), 
-			knapSack(peso_max, itens, n-1))
+		req_com = knapSack(peso_max-itens[n-1]['peso'], itens, n-1)
+		req_sem = knapSack(peso_max, itens, n-1)
+		com_item = itens[n-1]['valor'] + req_com[0]
+		sem_item = req_sem[0]
+
+		peso = max(com_item, sem_item)
+
+		if peso == com_item:
+			c = [itens[n-1], *req_com[1]]
+		else:
+			c = [req_sem[1]]
+
+		return [peso, c]
+
+
 
 itens = [
-	{'peso': 12, 'valor': 60}, 
-	{'peso': 30, 'valor': 300}, 
-	{'peso': 20, 'valor': 120},
-	{'peso': 25, 'valor': 235}, 
-	{'peso': 100, 'valor': 20}
+	{'id': 1, 'peso': 50, 'valor': 1}, 
+	{'id': 2, 'peso': 30, 'valor': 3}, 
+	{'id': 3, 'peso': 100, 'valor': 4},
 ]
 
 peso_max = 150
