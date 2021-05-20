@@ -24,9 +24,7 @@ class Heap:
             self.heapify(a, n, i)
 
         for i in range(n - 1, -1, -1):
-            temp = a[0]
-            a[0] = a[i]
-            a[i] = temp
+            a[0], a[i] = a[i], a[0]
 
             self.heapify(a, i, 0)
 
