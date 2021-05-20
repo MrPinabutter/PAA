@@ -30,18 +30,6 @@ def merge(arr, p, q, u):
       arr[k] = r[j]
       j += 1
 
-  while (i < n1):
-    arr[k] = l[i]
-    i+=1
-    k+=1
-
-  while (j < n2):
-    arr[k] = r[j]
-    j+=1
-    k+=1
-
- 
-
 
 arr = []
 while(True):
