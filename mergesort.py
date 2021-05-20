@@ -43,7 +43,7 @@ def merge(arr, p, q, u):
  
 
 
-arr = [4, 32, 12, 3, 6, 2]
+arr = []
 while(True):
   try:
     n = int(input())
