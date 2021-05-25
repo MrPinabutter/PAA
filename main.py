@@ -37,61 +37,67 @@ if n == 0:  ### MERGE SORT
   print("MergeSort aleatório")    ## ALEATORIO
   for i in range(3):
     ini = time.time()
-    mergesort(arrAle.copy(), 0, len(arrAle)-1)
+    cont = mergesort(arrAle.copy(), 0, len(arrAle)-1)
     fim = time.time()
     times.append(fim-ini)
   print("Tempos de execução: ", f'{times[0]:.5f}', f'{times[1]:.5f}', f'{times[2]:.5f}')
   print("Tempo de execução média:", f'{(times[0] + times[1] + times[2])/3:.5f}')
+  print("Comparações:", cont)
   times = []
   print()
   print("MergeSort decrescente")  ## DECRESCENTE
   for i in range(3):
     ini = time.time()
-    mergesort(arrDec.copy(), 0, len(arrDec)-1)
+    cont = mergesort(arrDec.copy(), 0, len(arrDec)-1)
     fim = time.time()
     times.append(fim-ini)
   print("Tempos de execução: ", f'{times[0]:.5f}', f'{times[1]:.5f}', f'{times[2]:.5f}')
   print("Tempo de execução média:", f'{(times[0] + times[1] + times[2])/3:.5f}' )
+  print("Comparações:", cont)
   times = []
   print()
   print("MergeSort crescente")  ## CRESCENTE
   for i in range(3):
     ini = time.time()
-    mergesort(arrCres.copy(), 0, len(arrCres)-1)
+    cont = mergesort(arrCres.copy(), 0, len(arrCres)-1)
     fim = time.time()
     times.append(fim-ini)
   print("Tempos de execução: ", f'{times[0]:.5f}', f'{times[1]:.5f}', f'{times[2]:.5f}')
   print("Tempo de execução média:", f'{(times[0] + times[1] + times[2])/3:.5f}' )
+  print("Comparações:", cont)
 
-elif n == 1:  ### QUICKSORT
+elif n == 1:  ### BUBBLESORT
   print("BubbleSort aleatório") ## ALEATORIO
   for i in range(3):
     ini = time.time()
-    bubble(arrAle.copy())
+    cont = bubble(arrAle.copy())
     fim = time.time()
     times.append(fim-ini)
   print("Tempos de execução: ", f'{times[0]:.5f}', f'{times[1]:.5f}', f'{times[2]:.5f}')
   print("Tempo de execução média:", f'{(times[0] + times[1] + times[2])/3:.5f}')
+  print("Comparações:", cont)
   times = []
   print()
   print("BubbleSort decrescente") ## DECRESCENTE
   for i in range(3):
     ini = time.time()
-    bubble(arrDec.copy())
+    cont = bubble(arrDec.copy())
     fim = time.time()
     times.append(fim-ini)
   print("Tempos de execução: ", f'{times[0]:.5f}', f'{times[1]:.5f}', f'{times[2]:.5f}')
   print("Tempo de execução média:", f'{(times[0] + times[1] + times[2])/3:.5f}' )
+  print("Comparações:", cont)
   times = []
   print()
   print("BubbleSort crescente") ## CRESCENTE
   for i in range(3):
     ini = time.time()
-    bubble(arrCres.copy())
+    cont = bubble(arrCres.copy())
     fim = time.time()
     times.append(fim-ini)
   print("Tempos de execução: ", f'{times[0]:.5f}', f'{times[1]:.5f}', f'{times[2]:.5f}')
   print("Tempo de execução média:", f'{(times[0] + times[1] + times[2])/3:.5f}' )
+  print("Comparações:", cont)
 
 elif n == 2:  ### HEAPSORT
   print("HeapSort aleatório") ## ALEATORIO

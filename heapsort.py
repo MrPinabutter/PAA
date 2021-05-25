@@ -1,11 +1,9 @@
-import time
-
 class Heap:
     def heapify(self, a = [], n = 0, i = 0):
         largest = i
         l = 2 * i + 1
         r = 2 * i + 2
-
+        
         if l < n and a[l] > a [largest]:
             largest = l
 
