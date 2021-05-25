@@ -1,5 +1,3 @@
-import time
-
 def quicksort(arr, p, r):
   if p < r:
     q = partition(arr, p, r)
@@ -17,18 +15,3 @@ def partition(arr, p, r):
       arr[i], arr[j] = arr[j], arr[i]
   arr[i+1], arr[r] = arr[r], arr[i+1]
   return i+1
-
-
-arr = []
-while(True):
-  try:
-    n = int(input())
-    arr.append(n)
-  except EOFError:
-    break 
-
-ini = time.time()
-quicksort(arr, 0, len(arr)-1)
-fim = time.time()
-print("Tempo de execução:", fim-ini)
-print(arr)

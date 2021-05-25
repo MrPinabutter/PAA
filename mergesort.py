@@ -1,5 +1,3 @@
-import time
-
 def mergesort(arr, p, u):
   if p < u:
     q = int((p+u)/2)
@@ -29,18 +27,3 @@ def merge(arr, p, q, u):
     else:
       arr[k] = r[j]
       j += 1
-
-
-arr = []
-while(True):
-  try:
-    n = int(input())
-    arr.append(n)
-  except EOFError:
-    break 
-
-ini = time.time()
-mergesort(arr, 0, len(arr)-1)
-fim = time.time()
-print("Tempo de execução:", fim-ini)
-print(arr)

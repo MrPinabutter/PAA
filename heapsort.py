@@ -29,18 +29,3 @@ class Heap:
             self.heapify(a, i, 0)
 
 
-
-arr = []
-while(True):
-  try:
-    n = int(input())
-    arr.append(n)
-  except EOFError:
-    break 
-
-ini = time.time()
-heap = Heap()
-heap.sort(a = arr)
-fim = time.time()
-print("Tempo de execução:", fim-ini)
-print(arr)
