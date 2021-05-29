@@ -1,11 +1,21 @@
+from random import shuffle
+
 import resource, sys
+from quicksort import quicksort
+from mergesort import mergesort
+from insertionsort import insertion
+from bubblesort import bubble
 resource.setrlimit(resource.RLIMIT_STACK, (2**29,-1))
 sys.setrecursionlimit(10**6)
 
-def rec(n):
-  if n == 0:
-    return
-  return rec(n-1)
+arr = [x for x in range(1, 200001)]
 
-rec(200000)
+# shuffle(arr)
+print(arr[:30])
+print()
 
+print(len(arr))
+bubble(arr)
+# insertion(arr)
+
+print(arr[200000-30:])
